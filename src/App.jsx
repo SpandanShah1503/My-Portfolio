@@ -1,20 +1,16 @@
-import DarkVeil from "./components/DarkVeil"
+import DarkVeil from "./components/DarkVeil";
 
-function App() 
-{
-
-  return 
-  (
+function App() {
+  return (
     <>
-
-       <div style={{ width: "100%", height: "100vh", position: "relative" }}>
+      <div style={{ width: "100%", height: "100vh", position: "relative" }}>
       <DarkVeil 
-        hueShift={0}
-        noiseIntensity={0.15}
-        scanlineIntensity={0.2}
-        scanlineFrequency={2}
-        warpAmount={0.1}
-        speed={0.7}
+        hueShift={245}
+        noiseIntensity={0}
+        scanlineIntensity={0.}
+        scanlineFrequency={0}
+        warpAmount={0.0}
+        speed={1.2}
       />
       <h1 style={{
         position: "absolute",
@@ -24,15 +20,11 @@ function App()
         color: "white",
         zIndex: 10
       }}>
-        🚀 My Portfolio
+       
       </h1>
     </div>
-
-  
-     
-     <DarkVeil />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
