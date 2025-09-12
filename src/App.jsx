@@ -1,11 +1,9 @@
-import React from "react";
-import './components/Name';
 
 function App() {
 
   return (
     <>
-     <MorseToName />
+    <h1>Portfolio</h1>
     </>
   )
 }
