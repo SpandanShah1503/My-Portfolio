@@ -1,6 +1,8 @@
 import React from "react";
 import DarkVeil from "./components/ui/Background";
 import { FloatingDockDemo } from "./components/ui/FloatingDockDemo";
+import ProfileCard from "./components/ui/ProfileCard";
+
 
 function App() {
   return (
@@ -30,7 +32,21 @@ function App() {
         <FloatingDockDemo />
         </div>
 
-
+          <ProfileCard
+            name="Spandan Shah"
+            title="School Student"
+            handle="spandan_shah_04"
+            status="Online"
+            contactText="Contact Me"
+            avatarUrl="public/IMG_20250904_150550__2_-removebg-preview.png"
+            showBehindGradient={false}
+            innerGradient="transparent"
+            showUserInfo={true}
+            enableTilt={true}
+            enableMobileTilt={false}
+          
+          onContactClick={() => console.log('Contact clicked')}
+/>
 
     </div>
   );

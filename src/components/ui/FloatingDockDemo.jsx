@@ -33,6 +33,7 @@ export function FloatingDockDemo() {
       href: "#",
     },
     
+    
     {
       title: "Changelog",
       icon: (
