@@ -1,4 +1,8 @@
 import React from "react";
+//import About from "../../assets/user.svg";
+//import { ReactComponent as About } from "../../assets/user.svg";
+
+
 import { FloatingDock } from "./FloatingDock"; // ✅ correct local path
 import {
   IconBrandGithub,
@@ -7,6 +11,12 @@ import {
   IconHome,
   IconNewSection,
   IconTerminal2,
+  IconUser,
+  IconCode,
+  IconSchool,
+  IconFileBroken,
+  IconPlugConnected,
+  
 } from "@tabler/icons-react";
 
 export function FloatingDockDemo() {
@@ -19,35 +29,38 @@ export function FloatingDockDemo() {
       href: "#",
     },
     {
-      title: "Projects",
+      title: "About",
       icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconUser className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        
       ),
       href: "#",
     },
     {
       title: "Skills",
       icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconCode className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "Projects",
+      icon: (
+        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },
     
     
+    
     {
-      title: "Changelog",
+      title: "Education",
       icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconSchool className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },
-    {
-      title: "Twitter",
-      icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
+    
     {
       title: "GitHub",
       icon: (
@@ -55,6 +68,21 @@ export function FloatingDockDemo() {
       ),
       href: "#",
     },
+    {
+      title: "Resume",
+      icon: (
+        <IconFileBroken className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "Contact",
+      icon: (
+        <IconPlugConnected className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+
   ];
 
   return (

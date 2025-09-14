@@ -1,8 +1,9 @@
 import React from "react";
-import DarkVeil from "./components/ui/Background";
-import { FloatingDockDemo } from "./components/ui/FloatingDockDemo";
-import ProfileCard from "./components/ui/ProfileCard";
-
+import DarkVeil from "./components/ui/Background/Background";
+import { FloatingDockDemo } from "./components/ui/Navbar/FloatingDockDemo";
+// import ProfileCard from "./components/ui/ProfileCard";
+import { TextHoverEffectDemo } from "./components/ui/TextHoverEffectDemo";
+import { TextHoverEffect } from "./components/ui/text-hover-effect";
 
 function App() {
   return (
@@ -26,28 +27,41 @@ function App() {
       />
 
       {/* Navbar Floating Dock */}
-        
-        <div style={{ position: "fixed", top: 0, left: 0, width: "100%", zIndex: 1 }}>
-        
+      <div
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          zIndex: 1,
+        }}
+      >
         <FloatingDockDemo />
-        </div>
+      </div>
 
-          <ProfileCard
-            name="Spandan Shah"
-            title="School Student"
-            handle="spandan_shah_04"
-            status="Online"
-            contactText="Contact Me"
-            avatarUrl="public/IMG_20250904_150550__2_-removebg-preview.png"
-            showBehindGradient={false}
-            innerGradient="transparent"
-            showUserInfo={true}
-            enableTilt={true}
-            enableMobileTilt={false}
-          
-          onContactClick={() => console.log('Contact clicked')}
-/>
+      {/* Profile Card (commented for now) */}
+      {/*
+      <ProfileCard
+        name="Spandan Shah"
+        title="School Student"
+        handle="spandan_shah_04"
+        status="Online"
+        contactText="Contact Me"
+        avatarUrl="public/IMG_20250904_150550__2_-removebg-preview.png"
+        showBehindGradient={false}
+        innerGradient="transparent"
+        showUserInfo={true}
+        enableTilt={true}
+        enableMobileTilt={false}
+        onContactClick={() => console.log("Contact clicked")}
+      />
+      */}
 
+      {/* Text Hover Effect */}
+     {/* <TextHoverEffectDemo 
+      />
+      <TextHoverEffect />
+*/}
     </div>
   );
 }

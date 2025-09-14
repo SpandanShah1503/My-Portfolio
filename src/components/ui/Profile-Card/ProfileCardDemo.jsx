@@ -1,4 +1,4 @@
-import ProfileCard from './ProfileCard'
+import ProfileCard from './Profile-Card/ProfileCard'
   
 <ProfileCard
   name="Javi A. Torres"
