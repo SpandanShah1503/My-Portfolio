@@ -1,0 +1,10 @@
+.darkveil-canvas {
+  position: fixed;       /* stays in place while scrolling */
+  top: 0;
+  left: 0;
+  width: 100vw;          /* full browser width */
+  height: 100vh;         /* full browser height */
+  z-index: -1;           /* behind content */
+  display: block;
+  pointer-events: none;  /* so it won’t block clicks */
+}
