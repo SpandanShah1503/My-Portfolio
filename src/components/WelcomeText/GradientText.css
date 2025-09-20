@@ -1,19 +1,24 @@
 .animated-gradient-text {
-  position: relative;
-  margin: 0 auto;
+  position: absolute;
+  top: 5rem;
+  left: 1rem;
   display: flex;
-  max-width: fit-content;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   border-radius: 1.25rem;
-  font-weight: 500;
-  backdrop-filter: blur(10px);
-  transition: box-shadow 0.5s ease-out;
+  font-weight: 700;       /* make text bolder if needed */
+  font-size: 3rem;        /* increase text size */
+  padding: 0.5rem 1rem;   /* optional, space around text */
+  backdrop-filter: none;
+  transition: box-shadow 0.5s ease-out, transform 0.3s;
   overflow: hidden;
   cursor: pointer;
-  
+  max-width: fit-content;
+  margin: 0;
+  background-color: transparent;
 }
+
 
 .gradient-overlay {
   position: absolute;

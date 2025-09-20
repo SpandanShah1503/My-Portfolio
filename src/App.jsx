@@ -57,12 +57,14 @@ function App() {
       <FloatingDockDemo /> 
 
       <GradientText 
-      colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-      animationSpeed={3}
+      colors={["#FF0000", "#4079ff", "#EF00FF", 
+        "#FF007F",
+        "#FF9A00"]}
+      animationSpeed={10}
       showBorder={false}
       className="custom-class"
       >
-        Welcome My Name is Spandan Shah
+        Welcome
       </GradientText>
 
     </div>
