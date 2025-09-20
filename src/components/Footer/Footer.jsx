@@ -1,14 +1,14 @@
 import React from 'react';
-
+import { FaFacebookF , FaInstagram , FaTwitter } from "react-icons/fa"; 
 const Footer = () => {
   return (
-    <Footer className = "bg-gray-800 px-4 md:px=16 lg:px-28">
+    <footer className = "bg-black px-4 md:px-16 lg:px-28">
       <div className ="grid frid-cols-1 md:grid-cols-3">
               <div>
-                      <h2 className = 'text-lg font-bold mb-4'>
+                      <h2 className = 'text-white text-lg font-bold mb-4'>
                         About Me
-                          <p className = 'text-gray-300'></p>
                       </h2>
+                      <p className = 'text-white'>Hey</p>
               </div> 
               <div>
                       <h2 className = 'text-lg font-bold mb-4'>
@@ -29,9 +29,26 @@ const Footer = () => {
                           </ul>
                       </h2>
               </div>
-              <div></div>
+              <div>
+                <h2 className = "text-lg font-bold mb-4">Follow Me</h2>
+                  <ul className = "flex space-x-4">
+                            <li> <FaFacebookF className ="text-blue-500"/>
+                            {""}
+                              <a href ="" className = "hover:underline text-gray-300">Home</a>
+                            </li>
+                          
+                            <li>
+                              <FaTwitter className = "text-sky-500"/>
+                              <a href ="" className = "hover:underline text-gray-300">Projectst</a>
+                            </li>
+                            <li>
+                              <FaInstagram className = "text-orange-500" />
+                               <a href ="" className = "hover:underline text-gray-300">Contact</a>
+                            </li>
+                          </ul>
+              </div>
       </div>
-    </Footer>
+    </footer>
   );
 };
 

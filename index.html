@@ -2,9 +2,31 @@
 <html lang="en">
   <head>
   
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+    <link rel="icon" type="image/png" href="./public/Untitled design.png" />
+❌ Wrong — in Vite, files inside public/ are served from the root, so you don’t write public/.
+Also, spaces in file names (Untitled design.png) can break loading.
+
+✅ Fix:
+
+Rename your file: favicon.png
+
+Put it in /public/
+
+Update:
+
+html
+Copy code
+<link rel="icon" type="image/png" href="/favicon.png" />
+In Vite, anything inside the public/ folder is served from the root /.
+That means you don’t prefix it with ./ or public/.
+-->
+
   
   <title>Portfolio</title>
-  <link rel="icon" type="image/png" href="./public/Untitled design.png" />
+  <link rel="icon" type="image/png" href="/Favicon.png" />
 </head>
   <body>
     <div id="root"></div>
