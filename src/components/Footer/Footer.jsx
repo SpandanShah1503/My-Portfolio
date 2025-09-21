@@ -3,8 +3,8 @@ import { FaFacebookF, FaGithub, FaInstagram, FaTwitter ,FaLinkedin, FaDiscord } 
 
 const Footer = () => {
   return (
-    <footer className="bg-transparent px-4 md:px-16 lg:px-32 py-8 max-w-screen-xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <footer className="bg-transparent px-4 md:px-8 lg:px-16 py-8 w-full overflow-x-hidden">
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         
         {/* About Me */}
         <div>
@@ -26,7 +26,7 @@ const Footer = () => {
         {/* Social Media */}
         <div>
           <h2 className="text-white text-lg font-bold mb-4">Follow Me</h2>
-          <ul className="flex space-x-7">
+          <ul className="flex flex-wrap gap-4">
             <li>
               <a href="#" className="flex items-center space-x-2 text-blue-400 hover:text-blue-500">
                 <FaFacebookF /> <span>Facebook</span>
@@ -37,29 +37,34 @@ const Footer = () => {
                 <FaTwitter /> <span>Twitter</span>
               </a>
             </li>
-           <li>
+            <li>
               <a href="#" className="flex items-center space-x-2">
-                <FaInstagram className="text-pink-500 " /> 
-                <span className="bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 bg-clip-text text-transparent ">
-                Instagram
-                </span>
-  </a>
-</li>
-
-
-             <li>
+            {/* Gradient icon using bg-clip-text + inline SVG coloring */}
+            <FaInstagram className="text-orange-400" 
+            style={{
+            background: "linear-gradient(90deg, #f97316, #ec4899, #8b5cf6)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent"
+            }} 
+            />
+            <span className="bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 bg-clip-text text-transparent">
+            Instagram
+            </span>
+            </a>
+            </li>
+            <li>
               <a href="#" className="flex items-center space-x-2 text-gray-300 hover:text-pink-500">
                 <FaGithub/> <span>GitHub</span>
               </a>
             </li>
             <li>
               <a href="#" className="flex items-center space-x-2 text-blue-400 hover:text-pink-500">
-                <FaLinkedin className="text-blue-500 group-hover:text-pink-400"/> <span>LinkedIn</span>
+                <FaLinkedin /> <span>LinkedIn</span>
               </a>
             </li>
             <li>
               <a href="#" className="flex items-center space-x-2 text-blue-400 hover:text-pink-500">
-                <FaDiscord className="text-blue-500 group-hover:text-pink-400"/> <span>Discord</span>
+                <FaDiscord /> <span>Discord</span>
               </a>
             </li>
           </ul>
@@ -71,3 +76,12 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+/*
+FaInstagram is an SVG, so text-transparent alone will hide it.
+
+Using background-clip: text and -webkit-text-fill-color: transparent allows the SVG to inherit a gradient visually, similar to text.
+
+The span text still has your existing gradient.
+*/

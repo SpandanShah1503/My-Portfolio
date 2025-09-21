@@ -1,8 +1,9 @@
 import React from "react";
-import Background from "./Background/Background";
+import Background from "./components/Background/Background";
 import { FloatingDockDemo } from "./components/Navbar/FloatingDockDemo";
 import GradientText from "./components/WelcomeText/GradientText";
 import Footer from "./components/Footer/Footer";
+import VideoPlayer from "./components/Video1/Video1"
 
 function App() {
   return (
@@ -78,10 +79,15 @@ function App() {
                    </GradientText>
               </div>
 
+              
+              
+              <div>
+                <VideoPlayer />
+              </div>
+              
               <div>
                 <Footer />
               </div>
-
       
 </div>
 
