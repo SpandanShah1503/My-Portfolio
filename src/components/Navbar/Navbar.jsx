@@ -9,6 +9,7 @@ import {
 
 export default function Navbar() {
   return (
+    
     <header className="relative flex justify-center mt-6 z-50">
       <nav className="flex items-center gap-2 px-3 py-2 rounded-full
         backdrop-blur-xl bg-black/40
