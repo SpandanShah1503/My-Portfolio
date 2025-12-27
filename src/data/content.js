@@ -3,7 +3,7 @@ export const person = {
   lastName: "Shah",
   role: "Student",
   avatar: "/images/avatar.jpg",
-  location: "Asia/Kolkata",
+  location: "Ahmedabad, Gujarat, India",
   languages: ["English", "Hindi", "Gujarati"],
 };
 
