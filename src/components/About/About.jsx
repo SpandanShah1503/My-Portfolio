@@ -1,6 +1,6 @@
 import React from "react";
 import Background from "../Background/Background";
-import { InlineCode } from "../InlineCode/InlineCode";
+import SocialLink from "../SocialLink/SocialLink";
 import { person, about } from "../../data/content";
 
 
@@ -63,6 +63,10 @@ export default function AboutPage() {
             ))}
           </div>
         </section>
+
+        <div>
+          <SocialLink />
+        </div>
 
         {/* ================= ABOUT ================= */}
         <section>
