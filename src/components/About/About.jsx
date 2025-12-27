@@ -2,10 +2,30 @@ import React from "react";
 import Background from "../Background/Background";
 import SocialLink from "../SocialLink/SocialLink";
 import { person, about } from "../../data/content";
+import LogoLoop from "../LogoLoop/LogoLoop";
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiKalilinux, SiN8N } from "react-icons/si";
 
+import { FaNode } from "react-icons/fa";
 
 export default function AboutPage() {
   const fullName = `${person.firstName} ${person.lastName}`;
+
+  const techLogos = [
+  { node: <SiReact />, title: "React", href: "https://react.dev" },
+
+  { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+
+  { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+
+  { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+
+  { node: <FaNode />, title: "Node Js", href: "https://nodejs.org/en" },
+
+  { node: <SiKalilinux />, title: "Kali Linux", href: "https://www.kali.org/" },
+
+  { node: <SiN8N />, title: "N8n", href: "https://n8n.io/" },
+
+  ];
 
   return (
     <div className="relative min-h-screen">
@@ -108,6 +128,25 @@ export default function AboutPage() {
             ))}
           </ul>
         </section>
+        
+
+        {/*Loop of Tech Logos*/}
+        <div className="h-[250px] overflow-hidden">
+        <LogoLoop
+          logos={techLogos}
+          speed={120}
+          direction="left"
+          logoHeight={48}
+          gap={40}
+          fadeOut={false}
+          fadeOutColor="#0b0b0b"  // 👈 MATCH BACKGROUND
+          scaleOnHover
+/>
+        </div>
+
+
+
+
 
         {/* ================= SKILLS ================= */}
         <section>
