@@ -3,6 +3,7 @@ import Background from "../Background/Background";
 import { InlineCode } from "../InlineCode/InlineCode";
 import { person, about } from "../../data/content";
 
+
 export default function AboutPage() {
   const fullName = `${person.firstName} ${person.lastName}`;
 
@@ -52,9 +53,10 @@ export default function AboutPage() {
           {/* Languages */}
           <div className="flex gap-2 mt-2 flex-wrap justify-center">
             {person.languages.map((lang, i) => (
+              
               <span
                 key={i}
-                className="px-3 py-1 text-sm rounded-full bg-white/10 border border-white/10"
+                className="relative overflow-hidden px-3 py-1 text-sm rounded-full bg-white/10 border border-white "
               >
                 {lang}
               </span>
