@@ -10,6 +10,16 @@ import { FaNode } from "react-icons/fa";
 export default function AboutPage() {
   const fullName = `${person.firstName} ${person.lastName}`;
 
+  const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+};
+
   const techLogos = [
   { node: <SiReact />, title: "React", href: "https://react.dev" },
 
@@ -45,6 +55,37 @@ export default function AboutPage() {
       />
 
       <main className="text-white max-w-4xl mx-auto px-6 py-24 space-y-16">
+
+        {/* ================= SIDE NAVIGATION ================= */}
+<div className="hidden md:block fixed left-8 top-1/2 -translate-y-1/2 space-y-4 z-50">
+  <button
+    onClick={() => scrollToSection("introduction")}
+    className="block text-left text-white/70 hover:text-emerald-400 transition"
+  >
+    — Introduction
+  </button>
+
+  <button
+    onClick={() => scrollToSection("work-experience")}
+    className="block text-left text-white/70 hover:text-emerald-400 transition"
+  >
+    — Work Experience
+  </button>
+
+  <button
+    onClick={() => scrollToSection("studies")}
+    className="block text-left text-white/70 hover:text-emerald-400 transition"
+  >
+    — Studies
+  </button>
+
+  <button
+    onClick={() => scrollToSection("skills")}
+    className="block text-left text-white/70 hover:text-emerald-400 transition"
+  >
+    — Technical Skills
+  </button>
+</div>
 
         {/* ================= PROFILE HEADER ================= */}
         <section className="flex flex-col items-center text-center gap-4">
@@ -89,7 +130,7 @@ export default function AboutPage() {
         </div>
 
         {/* ================= ABOUT ================= */}
-        <section>
+        <section id="introduction" className="scroll-mt-28">
           <h2 className="text-2xl font-semibold">{about.intro.title}</h2>
 
           <p className="mt-4 whitespace-pre-line opacity-90">
@@ -98,7 +139,7 @@ export default function AboutPage() {
         </section>
 
         {/* ================= WORK ================= */}
-        <section>
+        <section id="work-experience" className="scroll-mt-28">
           <h2 className="text-2xl font-semibold">Work Experience</h2>
 
           {about.work.map((job, i) => (
@@ -119,7 +160,7 @@ export default function AboutPage() {
         </section>
 
         {/* ================= STUDIES ================= */}
-        <section>
+        <section id="studies" className="scroll-mt-28">
           <h2 className="text-2xl font-semibold">Studies</h2>
 
           <ul className="list-disc ml-6 mt-3 space-y-1">
@@ -149,7 +190,7 @@ export default function AboutPage() {
 
 
         {/* ================= SKILLS ================= */}
-        <section>
+        <section id="skills" className="scroll-mt-28">
           <h2 className="text-2xl font-semibold">Technical Skills</h2>
 
           <div className="grid md:grid-cols-2 gap-4 mt-4">
