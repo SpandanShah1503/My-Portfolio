@@ -69,22 +69,7 @@ const App = () => {
               minHeight: "100vh",
             }}
           >
-            <Background
-              hueShift={251}
-              noiseIntensity={0}
-              scanlineIntensity={0}
-              scanlineFrequency={0}
-              warpAmount={0.0}
-              speed={1.2}
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                zIndex: -10,
-              }}
-            />
+           
 
             <div className="mb-8">
               <Navbar />
