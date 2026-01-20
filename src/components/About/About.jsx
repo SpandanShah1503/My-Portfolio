@@ -4,8 +4,10 @@ import SocialLink from "../SocialLink/SocialLink";
 import { person, about } from "../../data/content";
 import LogoLoop from "../LogoLoop/LogoLoop";
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiKalilinux, SiN8N } from "react-icons/si";
-
 import { FaNode } from "react-icons/fa";
+import "./About.css";
+
+
 
 export default function AboutPage() {
   const fullName = `${person.firstName} ${person.lastName}`;
@@ -38,8 +40,8 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="relative min-h-screen">
-      {/* Background */}
+    <div className="relative min-h-screen Background-color">
+      {/* Background 
       <Background
         hueShift={251}
         noiseIntensity={0}
@@ -50,9 +52,9 @@ export default function AboutPage() {
         style={{
           position: "absolute",
           inset: 0,
-          zIndex: -10,
+          zIndex: -50,
         }}
-      />
+      />*/}
 
       <main className="text-white max-w-4xl mx-auto px-6 py-24 space-y-16">
 
@@ -185,23 +187,28 @@ export default function AboutPage() {
 />
         </div>
 
-
-
-
-
         {/* ================= SKILLS ================= */}
         <section id="skills" className="scroll-mt-28">
-          <h2 className="text-2xl font-semibold">Technical Skills</h2>
+          <h2 className="text-2xl font-semibold justify-center">Technical Skills</h2>
 
           <div className="grid md:grid-cols-2 gap-4 mt-4">
             {about.skills.map((skill, i) => (
               <div
                 key={i}
-                className="p-4 border border-white/10 rounded-lg"
+                className="p-4 border border-white/10 rounded-lg "
               >
+                  <div className="flex justify-center gap-4">
+                    <img 
+                      src={skill.icon}
+                      alt={skill.name}
+                      className="w-40 h-40  object-cover">
+
+                      </img>
+                  </div>
                 <h3 className="font-semibold">{skill.name}</h3>
                 <p className="opacity-70">{skill.desc}</p>
               </div>
+              
             ))}
           </div>
         </section>

@@ -10,10 +10,10 @@ import {
 export default function Navbar() {
   return (
     
-    <header className="relative flex justify-center mt-6 z-50">
-      <nav className="flex items-center gap-2 px-3 py-2 rounded-full
+      <div className="relative flex justify-center  z-50">
+      <div className="flex items-center gap-2 px-3 py-2 rounded-full
         backdrop-blur-xl bg-black/40
-        border border-white/15 shadow-lg">
+        border border-white/15 ">
 
         {/* HOME */}
         <NavItem to="/" icon={<Home size={20} />} />
@@ -31,8 +31,8 @@ export default function Navbar() {
 
         {/* Contact */}
         <NavItem to="/contact" icon={<BookOpen size={20} />} label="Contact" />
-      </nav>
-    </header>
+      </div>
+    </div>
   );
 }
 
