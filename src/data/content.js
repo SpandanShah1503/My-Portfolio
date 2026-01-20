@@ -55,6 +55,7 @@ Feel free to explore my work and connect with me!
     {
       name: "AI-Based Threat Detection",
       desc: "Used AI models to detect abnormal and malicious traffic",
+      icon: "/Ai-Based Threat Detection.png"
     },
     {
       name: "Adaptive Security Systems",
