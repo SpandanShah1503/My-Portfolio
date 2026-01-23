@@ -4,8 +4,10 @@ import BackgroundWrapper from "./src/components/Background/BackgroundWrapper";
 import Navbar from "./src/components/Navbar/Navbar";
 import AboutPage from "./src/components/About/About";
 import Experience from "./src/components/Experience/Experience";
+import Work from "./src/components/Work/Work";
 import Footer from "./src/components/Footer/Footer";
 import "./App.css";
+import { color } from "framer-motion";
 
 const App = () => {
   return (
@@ -31,7 +33,7 @@ const App = () => {
 
             
 
-            <div className="mb-8">
+            <div className="mb-8 py-2">
               <Navbar />
             </div>
 
@@ -77,7 +79,7 @@ const App = () => {
 
            </div>
 
-            <div className="Background-color border-white/10 relative w-full">
+            <div className="Background-color border-white/10 relative w-full py-2">
               <Navbar />
               <div className="pt-20">
                     <AboutPage />
@@ -90,8 +92,38 @@ const App = () => {
             
           }
       />
-      
-      
+
+      {/* Work ROUTE */}
+      <Route path="/work"
+          element=
+          {
+            <>
+          
+              <div style=
+              {
+                {
+                  position: "relative",
+                  width: "100%",
+                  minHeight: "100vh",
+                  backgroundColor: "black",
+            
+                }
+              }>
+
+              
+              <div className="Background-color border-white/10 relative w-full py-2">
+                <Navbar />
+                <div className="pt-20">
+                      
+                  </div>
+              </div>
+              <Work />
+              <Footer />
+              </div>
+            </>
+          }
+      />
+
     </Routes>
 
    </>
