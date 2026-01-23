@@ -118,7 +118,11 @@ const App = () => {
                   </div>
               </div>
               <Work />
-              <Footer />
+
+              <div className="mt-6">
+                <Footer />
+              </div>
+
               </div>
             </>
           }
