@@ -22,6 +22,11 @@ const Work = () => {
         <p className="text-white">This is a collection of my professional work, highlighting hands-on experience, responsibilities, and contributions to real products in collaborative and production environments.</p>
       </section>
 
+       <section id="Projects" className="mt-10 min-h-screen mb-40">
+        <h2 className="text-2xl text-white">Projects</h2>
+        <p className="text-white">This is a space for self-driven and academic projects that reflect my curiosity, problem-solving approach, and passion for building beyond formal work.</p>
+      </section>
+
     </main>
 
 
