@@ -1,137 +1,91 @@
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import BackgroundWrapper from "./src/components/Background/BackgroundWrapper";
+
 import Navbar from "./src/components/Navbar/Navbar";
 import AboutPage from "./src/components/About/About";
 import Experience from "./src/components/Experience/Experience";
 import Work from "./src/components/Work/Work";
 import Footer from "./src/components/Footer/Footer";
+import CyberLoader from "./src/components/CyberLoader/CyberLoader";
+
 import "./App.css";
-import { color } from "framer-motion";
 
-const App = () => {
-  return (
-    <>
-    {/*<BackgroundWrapper />*/}
+const App = () =>
+{
+    const [loaded, setLoaded] = useState(false);
 
-    <Routes>
-      {/* HOME ROUTE */}
-        <Route path="/"
-          element=
-          {
-            <div className="Background-color relative min-h-screen w-full">
-            <div
-              style=
-              {
-                {
-                  position: "relative",
-                  width: "100%",
-                  minHeight: "100vh",
-                }
-              }
-            >
+    return (
+        <>
+            {
+                !loaded &&
+                (
+                    <CyberLoader onFinish={() => setLoaded(true)} />
+                )
+            }
 
-            
+            {
+                loaded &&
+                (
+                    <Routes>
 
-            <div className="mb-8 py-2">
-              <Navbar />
-            </div>
+                        {/* HOME */}
+                        <Route
+                            path="/"
+                            element={
+                                <div className="Background-color relative min-h-screen w-full">
 
-            <div className="relative pt-20">
-              <div className="pt-24">
+                                    <div
+                                        style={{
+                                            position: "relative",
+                                            width: "100%",
+                                            minHeight: "100vh",
+                                        }}
+                                    >
 
-              </div>
+                                        <Navbar />
 
-              <Experience />
-              <Footer />
-            </div>
-          </div>
-          </div>
-        }
-      />
+                                        <Experience />
+                                        <Footer />
 
-      {/* ABOUT ROUTE */}
-      <Route path="/about" 
-      /* 
-      This tells React Router: When the URL is https://yourwebsite.com/about ,Show this UI layout.
-      */
-          element=
-          /* 
-          element defines what JSX should be rendered for this route.Everything inside this <div> becomes the About page layout.
-          */
-          {
-            <>
-            
-           
-            <div
-              style=
-              {
-                {
-                  position: "relative",
-                  width: "100%",
-                  minHeight: "100vh",
-            
-                }
-              }
-            >
-              
-           <div className="Background-color">
+                                    </div>
 
-           </div>
+                                </div>
+                            }
+                        />
 
-            <div className="Background-color border-white/10 relative w-full py-2">
-              <Navbar />
-              <div className="pt-20">
-                    <AboutPage />
-                </div>
-            </div>
+                        {/* ABOUT */}
+                        <Route
+                            path="/about"
+                            element={
+                                <div className="Background-color min-h-screen">
 
-            
-            </div>
-            </>
-            
-          }
-      />
+                                    <Navbar />
 
-      {/* Work ROUTE */}
-      <Route path="/work"
-          element=
-          {
-            <>
-          
-              <div style=
-              {
-                {
-                  position: "relative",
-                  width: "100%",
-                  minHeight: "100vh",
-                  backgroundColor: "black",
-            
-                }
-              }>
+                                    <AboutPage />
 
-              
-              <div className="Background-color border-white/10 relative w-full py-2">
-                <Navbar />
-                <div className="pt-20">
-                      
-                  </div>
-              </div>
-              <Work />
+                                </div>
+                            }
+                        />
 
-              <div className="mt-6">
-                <Footer />
-              </div>
+                        {/* WORK */}
+                        <Route
+                            path="/work"
+                            element={
+                                <div className="Background-color min-h-screen">
 
-              </div>
-            </>
-          }
-      />
+                                    <Navbar />
 
-    </Routes>
+                                    <Work />
 
-   </>
-  );
+                                </div>
+                            }
+                        />
+
+                    </Routes>
+                )
+            }
+        </>
+    );
 };
 
 export default App;
